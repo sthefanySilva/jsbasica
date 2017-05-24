@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Js basico</title>
+		
+		<script>
+			function trocarletra(){
+				swich(caracter){
+				case "p":return"t";
+				case "o":return"e";
+				case "l":return"n";
+				case "a":return"i";
+				case "r":return"s";
+				default:retun caracter;
+				
+				}
+			}
+			function criptografar(){
+				var frase=document.getElementById("frase").value;
+				frase=frase.UpperCase();
+				var fraseCriptografada="";
+				for( var i=0; i<frase.length; i++ ){
+					var letra=frase.chartAt(i);
+					var letracripto=trocarLetra(letra);
+					fraseCriptografada+=letracripto;
+				}
+				document.getElementById("msg").innerHTML=fraseCriptografada;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="text" id="frase"/>
+			<input type="button" onclick="criptografar()" value="criptografar"/>
+		</form>
+	</body>
+</html>
